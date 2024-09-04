@@ -1,0 +1,32 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Bienvenido Administrador {{usuario}}</span>
+    </div>
+</nav>
+<br />
+<div>
+    <app-modalpersonas (eventoGuardar)="guardarPersona($event)"></app-modalpersonas>
+</div>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Identificaci&oacute;n</th>
+            <th scope="col">Nombres</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Email</th>
+            <th scope="col">Celular</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of datosPersona">
+            <th scope="row"> {{ persona.id }}</th>
+            <td>{{ persona.identificacion }}</td>
+            <td>{{ persona.nombres }}</td>
+            <td>{{ persona.edad }}</td>
+            <td>{{ persona.email }}</td>
+            <td>{{ persona.celular }}</td>
+        </tr>
+    </tbody>
+</table>

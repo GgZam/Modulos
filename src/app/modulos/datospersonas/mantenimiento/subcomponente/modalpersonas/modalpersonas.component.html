@@ -1,0 +1,43 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+    [attr.data-bs-target]="'#'+modalid">Agregar</button>
+
+<div class="modal fade" id="{{modalid}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">INGRESO DE PERSONAS</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="divMensaje"></div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="identifi" class="col-form-label">Identificaci&oacute;n:</label>
+                        <input type="text" name="identifi" class="form-control" id="identifiid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombres" class="col-form-label">Nombres:</label>
+                        <input name="nombres" type="text" class="form-control" id="nombresid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edad" class="col-form-label">Edad:</label>
+                        <input name="edad" type="number" class="form-control" id="edadid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input name="email" type="email" class="form-control" id="emailid" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cel" class="col-form-label">Celular:</label>
+                        <input name="calular" type="text" class="form-control" id="celularid" placeholder="Opcional">
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" id="btnCerrar" class="btn btn-secondary" value="Cerrar"
+                            data-bs-dismiss="modal">
+                        <input type="button" class="btn btn-primary" value="Guardar" (click)="guardar()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
